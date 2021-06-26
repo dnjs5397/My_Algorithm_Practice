@@ -65,7 +65,29 @@ class NodeManagement:
                 node = node.next
             node.next = Node(data)
 
-    def print_all(self):
+    def delete(self, data): # 1. head 삭제 2. 마지막 노드 삭제 3. 중간 노드 삭제
+        if self.head == None:
+            print("해당 값을 가진 노드가 없음.")
+            return
+        if self.head.data == data: # head 삭제
+            temp = self.head
+            self.head = self.head.next
+            del temp
+        else:
+            node = self.head # 중간 노드 삭제
+            while node.next:
+                if node.next.data == data:
+                    temp = node.next
+                    node.next = node.next.next
+                    del temp
+                    break # 삭제하고 탈출
+                else:
+                    node = node.next
+                    if (node.next == None):
+                        print("해당 값을 가진 노드가 없음.") # 루프 다 돌았는데 찾는 값 없으면 출력
+
+
+    def print_all(self): # 출력 함수
         node = self.head
         while node:
             print(node.data)
