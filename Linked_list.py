@@ -3,7 +3,7 @@
 # 장점 : 데이터 공간 미리 할당 안해도 됨
 # 단점 : 데이터 탐색에 시간이 오래걸림(비효율적) / 중간 데이터 삭제 시 추가 연결작업 필요 / 
 
-class Node:
+'''class Node:
     def __init__(self, data, next=None):
         self.data = data
         self.next = next
@@ -43,7 +43,7 @@ while search:
 
 node_next = node.next # 찾은 노드의 다음 노드 주소 저장
 node.next = node3
-node3.next = node_next
+node3.next = node_next'''
 
 # ---------------------------- 위 모든 기능을 클래스 내에 구현한 Linked list 만들기
 
@@ -92,3 +92,13 @@ class NodeManagement:
         while node:
             print(node.data)
             node = node.next
+
+    def search(self, data): # 탐색 함수
+        node = self.head
+        while node:
+            if (node.data == data):
+                print(node.data)
+                return
+            else:
+                node = node.next
+        print("해당 값을 가진 노드가 없음.")
