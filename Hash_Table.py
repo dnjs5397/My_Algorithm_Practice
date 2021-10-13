@@ -31,3 +31,4 @@ def get_data(data):
     hash_address = hash_func(key)
     print(hash_table[hash_address])
     return
+
