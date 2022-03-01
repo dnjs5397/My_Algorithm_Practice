@@ -1,7 +1,7 @@
-#import random
+import random
 
-#list = random.sample(range(100), 10)
-list = list(map(int, input().split()))
+list = random.sample(range(100), 10)
+#list = list(map(int, input().split()))
 leng = len(list)
 turn = 0
 for i in range(leng-1):
