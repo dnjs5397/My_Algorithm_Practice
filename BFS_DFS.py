@@ -1,8 +1,4 @@
 # BFS -> Breadth-First Search -> 너비 우선 탐색 -> 정점들과 같은 레벨에 있는 노드들(형제 노드들)을 먼저 탐색하는 방식
-
-from tracemalloc import start
-
-
 graph = dict()
 
 graph['A'] = ['B', 'C']
